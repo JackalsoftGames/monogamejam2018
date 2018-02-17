@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B017238-2992-4AA8-AF0C-3D640B66A4EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presto</RootNamespace>
+    <AssemblyName>Presto!</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>res\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Presto.Game</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FNA, Version=18.1.2.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\FNA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FNA.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libjpeg-9.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libogg-0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libpng16-16.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libtheoradec-1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libtheorafile.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libvorbis-0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libvorbisfile.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MojoShader.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SDL2_image.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="soft_oal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="zlib1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\default.pal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\gameplay\EntityType.cs" />
+    <Compile Include="src\gameplay\EntityMobile.cs" />
+    <Compile Include="src\gameplay\EntityStateManager.cs" />
+    <Compile Include="src\gameplay\PlayerStateManager.cs" />
+    <Compile Include="src\gameplay\EntityStatic.cs" />
+    <Compile Include="src\enums\BehaviorFlags.cs" />
+    <Compile Include="src\gameplay\ParticleStateManager.cs" />
+    <Compile Include="src\enums\EntityAction.cs" />
+    <Compile Include="src\enums\EntityInventory.cs" />
+    <Compile Include="src\gameplay\GameState.cs" />
+    <Compile Include="src\Global.cs" />
+    <Compile Include="src\extensions\XNAExtensions.cs" />
+    <Compile Include="src\extensions\CSharpExtensions.cs" />
+    <Compile Include="src\extensions\CopymanExtensions.cs" />
+    <Compile Include="src\input\IInputQueryable.cs" />
+    <Compile Include="src\input\GamePadInputSource.cs" />
+    <Compile Include="src\input\InputSource.cs" />
+    <Compile Include="src\input\KeyboardInputSource.cs" />
+    <Compile Include="src\input\MouseButtons.cs" />
+    <Compile Include="src\input\MouseInputSource.cs" />
+    <Compile Include="src\structs\Position.cs" />
+    <Compile Include="src\interfaces\ITickable.cs" />
+    <Compile Include="src\structs\Delta3.cs" />
+    <Compile Include="src\structs\Delta2.cs" />
+    <Compile Include="src\structs\TickTimer.cs" />
+    <Compile Include="src\enums\Direction.cs" />
+    <Compile Include="src\structs\Transform.cs" />
+    <Compile Include="src\Sprite.cs" />
+    <Compile Include="src\Game.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lvl\" />
+    <Folder Include="Properties\" />
+    <Folder Include="sav\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\default.fdat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
